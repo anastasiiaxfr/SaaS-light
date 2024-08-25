@@ -1,16 +1,13 @@
-import Head from "next/head";
-
 const meta = {
   title: "★SaaS | by Xforeal★",
   description: "",
-  img: "./seo.jpg",
+  img: "/seo.jpg",
   author: "Anastasiia Berest",
-  url: "./",
+  url: "/",
 };
 export default function SEO() {
   return (
-    <Head>
-      <meta charset="utf-8" />
+    <>
       <title>{meta.title}</title>
       <meta name="description" content={meta.description} />
 
@@ -44,21 +41,21 @@ export default function SEO() {
       <meta itemprop="description" content={meta.description} />
       <meta itemprop="image" content={meta.img} />
 
-      <link href="./fav/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-      <link href="./fav/favicon.ico" rel="icon" type="image/x-icon" />
+      <link href="/fav/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+      <link href="/fav/favicon.ico" rel="icon" type="image/x-icon" />
 
       <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-      <link rel="icon" href="./fav/favicon.png" type="image/x-icon" />
+      <link rel="icon" href="/fav/favicon.png" type="image/x-icon" />
 
-      <link rel="apple-touch-icon" sizes="144x144" href="./fav/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
-      <link rel="mask-icon" href="./fav/safari-pinned-tab.svg" color="#EAEEFE" />
+      <link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png" />
+      <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#EAEEFE" />
 
-      <link rel="manifest" href="./fav/site.webmanifest" />
-      <link rel="mask-icon" href="./fav/safari-pinned-tab.svg |relURL }}" color="#146ef5" />
+      <link rel="manifest" href="/fav/site.webmanifest" />
+      <link rel="mask-icon" href="/fav/safari-pinned-tab.svg |relURL }}" color="#146ef5" />
       <meta name="msapplication-TileColor" content="#EAEEFE" />
       <meta name="theme-color" content="#EAEEFE" />
-    </Head>
+    </>
   );
 }

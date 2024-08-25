@@ -1,4 +1,5 @@
 import "@/asssets/sass/main.sass";
+
 export const metadata = {
   title: "★SaaS | by Xforeal★", // Page title
   description: "A SaaS platform for modern businesses.", // Page description
@@ -27,14 +28,41 @@ export const metadata = {
     image: "/seo.jpg", // Twitter image
   },
   // Favicon metadata
-  favicon: {
-    main: "/fav/favicon.ico", // Main favicon
-    appleTouchIcon: "/fav/apple-touch-icon.png", // Apple Touch Icon
-    icon32x32: "/fav/favicon-32x32.png", // 32x32 favicon
-    icon16x16: "/fav/favicon-16x16.png", // 16x16 favicon
-    safariPinnedTab: "/fav/safari-pinned-tab.svg", // Safari pinned tab
-    manifest: "/fav/site.webmanifest", // Web manifest
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/icon/favicon.ico",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/icon/favicon-16x16.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        url: "/icon/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        url: "/icon/android-chrome-192x192.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        url: "/icon/android-chrome-512x512.png",
+      },
+    ],
   },
+
+  manifest: "/icon/site.webmanifest",
   // Theme color and tile color
   theme: {
     msapplicationTileColor: "#EAEEFE", // Microsoft Tile Color
