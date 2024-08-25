@@ -1,0 +1,62 @@
+.btn
+	+flex(inline-flex, center, center, nowrap)
+	height: 54px
+	min-width: 200px
+	padding: 8px 2em
+	border-radius: 6px
+	+theme(dark)
+	text-align: center
+	text-transform: uppercase
+	+ft(20, 20*1.2, 700)
+	transition: $trs
+	&:hover, &:active, &:focus
+		background-color: $primary
+		color: $white
+		box-shadow: $bxsd3
+	&s
+		+flex(inline-flex, center, center, nowrap)
+		gap: $gap4
+		row-gap: $gap2
+	&_inverse
+		background-color: $white
+		color: $black
+		&:hover, &:active, &:focus
+			background-color: $primary
+			color: $white
+				box-shadow: $bxsd3
+	&_top
+		+ps(fixed, (r, 16px), (b, 16px))
+		z-index: 1000
+		+sz(46px, 46px)
+		+theme(main)
+		border-radius: $brs
+		border: none
+
+	&-bd
+		@extend .btn
+		min-width: 150px
+		height: 50px
+		border: 2px solid $main
+		color: $main
+		background-color: transparent
+		
+		&:hover, &:active, &:focus
+			color: $main
+			background-color: transparent
+
+	&-text
+		+flex(inline-flex, center, center, nowrap)
+		gap: $gap1
+		transition: $trs
+		+ft(20, 20, 700)
+		&:hover, &:active, &:focus
+			text-decoration: none
+			color: darken($primary, 10%)
+			svg
+				transform: translateX(4px)
+	+maw($md)
+		font-size: 15px
+	+maw($sm)
+		&s
+			flex-wrap: wrap
+	

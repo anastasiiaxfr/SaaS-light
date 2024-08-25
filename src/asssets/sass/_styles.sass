@@ -1,0 +1,53 @@
+body
+	display: flex
+	flex-direction: column
+
+	+theme(white)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top left
+	font-family: $ffText, $ffBack
+
+a
+	font-family: inherit
+	&:hover, &:focus, &:active, &:focus-visible
+		outline: none
+		appearance: none
+		box-shadow: none
+
+.page
+	&__wrapper
+		overflow: hidden
+	&__content
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+	&__single
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+
+.container
+	position: relative
+	p
+		&:last-child
+			margin-bottom: 0
+
+	+maw($sm)
+		padding-left: $gap3
+		padding-right: $gap3
+
+.section
+	position: relative
+	margin-top: var(--gapSection)
+	margin-bottom: var(--gapSection)
+	//background: url('../images/bg2.svg') no-repeat 50%/cover
+	z-index: 1
+
+
+.slick-track
+	display: flex !important	
+	align-items: flex-end 
+	gap: 24px
+	+maw($md)
+		align-items: stretch
+	+maw($sm)
+		gap: 2px

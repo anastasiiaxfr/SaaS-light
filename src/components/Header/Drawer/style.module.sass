@@ -1,0 +1,36 @@
+@import '../../../asssets/sass/vars'
+
+.drawer
+	+ps(fixed, (t, 0), (l, 0))
+	z-index: 100500
+	+sz(100%, 100%)
+	+theme(dark)
+	padding: $gap3
+	height: 0
+	visibility: hidden
+	transform: translateX(-100%)
+	transition: transform 0.3s linear
+	overflow: hidden
+	overflow-y: scroll
+	&.show
+		display: flex
+		visibility: visible
+		height: 100%
+		transform: translateX(0)
+	.container
+		width: 100%
+	&_header
+		+flex(flex, center, space-between, nowrap)
+		margin-bottom: $gap3
+
+.menu
+	display: flex
+	flex-direction: column
+	a
+		display: inline-flex
+		padding: $gap2 0
+		border-bottom: 1px solid rgba($white, 0.1)
+		text-transform: uppercase
+		+ft(16, 16, 700)
+		&:last-child
+			border: 0

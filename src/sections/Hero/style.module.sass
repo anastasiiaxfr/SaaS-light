@@ -1,0 +1,50 @@
+@import '../../asssets/sass/vars'
+
+.hgroup
+    text-align: left
+    margin: 0
+    margin-bottom: $gap5
+    
+.hero
+    padding-top: $gap10
+    padding-bottom: $gap10
+    margin-bottom: $gap6
+    background-image: $grad
+
+    &_img
+        position: relative
+
+        img
+            height: auto
+            object-fit: contain
+            &:nth-child(1), &:nth-child(2)
+                position: absolute
+                z-index: 1
+            &:nth-child(2)
+                bottom: auto
+                left: -15%
+            &:nth-child(1)
+                right: 0
+                left: auto
+                top: auto
+                bottom: -40%
+        +maw($sm)
+            img
+                max-width: 100%
+                &:nth-child(1), &:nth-child(2)
+                    display: none
+   
+.row
+    display: grid
+    gap: $gap5
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    +maw($md)
+        grid-template-columns: 62% 1fr
+    +maw($sm)
+        grid-template-columns: 1fr
+    +maw($xs)
+        & *
+            justify-content: center
+            text-align: center
+

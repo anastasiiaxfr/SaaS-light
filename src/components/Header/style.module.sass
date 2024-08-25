@@ -1,0 +1,41 @@
+@import '../../asssets/sass/vars'
+
+.header
+    padding-top: $gap2
+    padding-bottom: $gap2
+    background-color: $light
+
+
+.row
+    display: grid
+    grid-template-columns: auto auto 250px
+    align-items: center
+    gap: $gap5
+    +maw($lg)
+        grid-template-columns: auto 300px
+    +maw($sm)
+        grid-template-columns: auto 40px
+        [class=btn]
+            display: none
+
+
+.menu
+    margin-left: auto
+    +flex(flex, center, center, nowrap)
+    grid-gap: $gap5
+    a
+        +ft(16, 16, 500)
+        transition: $trs
+        text-transform: uppercase
+
+        &:hover, &:active, &:focus
+            color: $primary
+    &_toggle
+        +flex(flex, center, center, nowrap)
+        +sz(40px, 40px)
+        margin-left: auto
+        +miw($lg)
+            display: none
+    +maw($lg)
+        display: none
+

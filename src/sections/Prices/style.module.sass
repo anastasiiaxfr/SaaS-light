@@ -1,0 +1,75 @@
+@import '../../asssets/sass/vars'
+@import '../../asssets/sass/btn'
+
+.section
+	position: relative
+	margin-top: $gap10
+	margin-bottom: $gap10
+
+// .cards
+// 	display: grid
+// 	grid-template-columns: repeat(3, 1fr)
+// 	gap: $gap3
+// 	align-items: flex-end
+// 	+maw($md)
+// 		grid-template-columns: 1fr
+
+.card
+	padding: $gap5
+	border-radius: $brs1
+	border: $bd
+	box-shadow: $bxsd
+	align-self: flex-end
+	max-width: 600px
+	transition: $trs
+	&:hover
+		box-shadow: none
+	&_top
+		+theme(dark)
+		box-shadow: $bxsd
+		.btn
+			@extend .btn_inverse
+		li::before
+			filter: invert(1)
+
+	&_header
+		+flex(flex, center, space-between, nowrap)
+		gap: $gap2
+		min-height: 34px
+	&_title
+		margin-top: $gap2
+		margin-bottom: $gap3
+		+ft(18, 18, 500)
+		span
+			opacity: 0.6
+		big
+			+ft(54, 60, 700)
+	&_label
+		+ft(20, 20, 500)
+	&_tag
+		+flex(inline-flex, center, center, nowrap)
+		padding: 8px 1em
+		border: 1px solid rgba($white, 0.1)
+		border-radius: 16pc
+		background-size: 200%
+		background-image: $grad1
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		+ft(15, 15, 700)
+	+maw($md)
+		li
+			display: none
+			&:first-child, &:nth-child(2), &:nth-child(3)
+				display: flex
+				
+				
+				
+	
+
+
+.btn
+	width: 100%
+	@extend .btn
+	margin-bottom: $gap4
+
+

@@ -1,0 +1,62 @@
+@import '../../asssets/sass/vars'
+
+
+.section
+    margin-bottom: $gap10
+    margin-top: $gap10
+
+.col
+    display: flex
+    flex-direction: column
+    gap: $gap4
+
+    +maw($md)
+        &:last-child
+            display: none
+    +maw($sm)
+        &:nth-child(2)
+            display: none
+
+.cards
+    position: relative
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: $gap4
+    overflow: hidden
+    max-height: 600px
+    &::before, &::after
+        content: ''
+        position: absolute
+        inset: 0
+        +sz(100%, 25%)
+        z-index: 1
+    &::before
+        top: -1em
+        margin-bottom: auto
+        background-image: linear-gradient(0deg, transparent, $white 75%)
+    &::after
+        bottom: -1em
+        margin-top: auto
+        background-image: linear-gradient(180deg, transparent, $white 75%)
+    +maw($md)
+        grid-template-columns: repeat(2, 1fr)
+    +maw($sm)
+        grid-template-columns: 1fr
+
+.card
+    padding: $gap5
+    border: $bd2
+    border-radius: $brs1
+    box-shadow: $bxsd
+    +ft(15, 15*1.3, 400)
+    margin: 0
+    &_footer
+        +flex(flex, center, flex-start, wrap)
+        gap: $gap1
+        margin-top: $gap2
+        img
+            +sz(50px, 50px)
+            border-radius: 50%
+            object-fit: cover
+        b
+            display: block

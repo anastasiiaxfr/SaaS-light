@@ -1,0 +1,62 @@
+@import '../../asssets/sass/vars'
+
+.footer
+    +theme(dark)
+    padding-top: $gap6
+    padding-bottom: $gap6
+    .row
+        display: grid
+        gap: $gap6
+        row-gap: $gap3
+        grid-template-columns: 1fr 1fr
+        align-items: flex-start
+    .col
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        height: 100%
+        [class*=soc]
+            margin-bottom: $gap1
+            margin-top: $gap1
+
+    .logo
+        display: grid
+        grid-template-columns: 60px auto
+        align-items: center
+        gap: $gap3
+        row-gap: $gap2
+        max-width: 500px
+        margin-bottom: $gap3
+    .note
+        margin: 0
+        opacity: 0.6
+        +ft(17, 17*1.3, 400)
+    .menu
+        display: grid
+        grid-template-columns: repeat(4, auto)
+        gap: $gap4
+        &_heading
+            display: block
+            margin-bottom: $gap2
+            +ft(18, 18, 700)
+            text-transform: uppercase
+        a
+            display: block
+            margin-top: $gap1
+            margin-bottom: $gap1
+            opacity: 0.6
+            transition: $trs
+            &:hover, &:active, &:focus
+                opacity: 1
+    +maw($md)
+        .row
+            grid-template-columns: 1fr
+        .logo
+            max-width: 100%
+    +maw($sm)
+        .note
+            font-size: 0.8em
+        .menu
+            grid-template-columns: auto auto
+

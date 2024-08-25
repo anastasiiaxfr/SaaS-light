@@ -1,0 +1,40 @@
+@import '../../asssets/sass/vars'
+
+
+.section
+    margin-top: $gap10
+    margin-bottom: $gap10
+
+.cards
+    max-width: 800px
+    margin-left: auto
+    margin-right: auto
+    display: grid
+    gap: $gap4
+    grid-template-columns: 1fr 1fr
+    justify-content: center
+    +maw($sm)
+        grid-template-columns: 1fr
+
+.card
+    padding: $gap5
+    border-radius: $brs1
+    border: $bd
+    box-shadow: $bxsd
+    text-align: center
+    +ft(16, 16*1.4, 400)
+    transition: $trs
+    img
+        +sz(250px, 250px)
+        object-fit: contain
+    &_title
+        +ft(22, 22*1.4, 700)
+        margin-bottom: $gap2
+        margin-top: $gap2
+    &:hover
+        box-shadow: none
+    +maw($sm)
+        img
+            +sz(80%, auto)
+
+

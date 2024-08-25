@@ -1,0 +1,37 @@
+@import '../../asssets/sass/vars'
+
+
+.section
+    position: relative
+    padding-top: $gap10
+    padding-bottom: $gap10
+    background: $grad2
+
+.row
+    max-width: 40em
+    margin-left: auto
+    margin-right: auto
+
+.subtitle
+    margin-bottom: $gap6
+    +ft(18, 18*1.4, 400)
+
+    +maw($sm)
+        font-size: 1em
+
+.bg
+    position: absolute
+    z-index: 0
+    inset: 0
+    +sz(100%, 100%)
+    display: grid
+    justify-content: center
+    grid-template-columns: 1fr 40em 1fr
+    img
+        &:first-child
+            margin-left: auto
+            transform: translateY(-4em)
+        &:last-child
+            grid-column: 3
+            margin-right: auto
+            transform: translateY(4em)
